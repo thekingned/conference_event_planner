@@ -63,11 +63,6 @@ const ConferenceEvent = () => {
 
   const getItemsFromTotalCost = () => {
     const items = [];
-    const totalCosts = {
-      venue: calculateTotalCost("venue"),
-      av: calculateTotalCost("av"),
-      meals: calculateTotalCost("meals"),
-    };
     venueItems.forEach((item) => {
       if (item.quantity > 0) {
         items.push({
@@ -363,7 +358,7 @@ const ConferenceEvent = () => {
               totalCosts={{
                 venue: venueTotalCost,
                 av: avTotalCost,
-                meals: mealsTotalCost,
+                meals: mealsTotalCost
               }}
               handleClick={handleToggleItems}
               ItemsDisplay={() => <ItemsDisplay items={items} />}
